@@ -1,0 +1,207 @@
+module Program
+
+imports Common
+imports KBuiltinsBasic
+exports
+
+context-free syntax
+context-free priorities
+{
+    Int -> AExp {}
+    String -> AExp {}
+    Id -> AExp {}
+    "++" Id -> AExp {cons("AExp1234Syn")}
+} > {
+    AExp "/" AExp -> AExp {left, cons("AExp1309Syn")}
+} > {
+    AExp "+" AExp -> AExp {left, cons("AExp1348Syn")}
+} > {
+    Id "=" AExp -> AExp {cons("AExp1260Syn")}
+}
+
+context-free priorities
+{
+    Bool -> BExp {}
+    AExp "<=" AExp -> BExp {cons("BExp1560Syn")}
+    "!" BExp -> BExp {cons("BExp175Syn")}
+} > {
+    BExp "&&" BExp -> BExp {left, cons("BExp1493Syn")}
+}
+
+context-free priorities
+{
+    "NOT" Cond -> CombinedAndNegatedCond {cons("CombinedAndNegatedCond1447Syn")}
+} > {
+    Cond "AND" Cond -> CombinedAndNegatedCond {left, cons("CombinedAndNegatedCond1457Syn")}
+} > {
+    Cond "OR" Cond -> CombinedAndNegatedCond {left, cons("CombinedAndNegatedCond1374Syn")}
+}
+
+context-free start-symbols
+DzString DzBool AExp Cond AExps Stmts BExp RelationCond StartValue CombinedAndNegatedCond String ClassCond Int Stmt Float FullRange Bool Block Ids Id DzInt SignCond DzFloat K
+context-free syntax
+    AExp "IS ZERO" -> SignCond {cons("SignCond1446Syn")}
+    "string" InsertDzIds ";" -> Stmt {cons("Stmt162Syn")}
+    DzString -> String {}
+    CombinedAndNegatedCond -> Cond {}
+    {Stmt ""}* -> Stmts {cons("Stmts1ListSyn")}
+    "88" InsertDzId "VALUES" InsertDzInt "THRU" InsertDzInt ";" -> Stmt {cons("Stmt1508Syn")}
+    "while" "(" InsertDzBExp ")" Block -> Stmt {cons("Stmt1520Syn")}
+    AExp "IS ALPHABETIC-UPPER" -> ClassCond {cons("ClassCond1453Syn")}
+    "(" InsertDzCond ")" -> Cond {cons("Cond1Bracket")}
+    DzFloat -> Float {}
+    RelationCond -> Cond {}
+    AExp "IS LESSER THAN" AExp -> RelationCond {cons("RelationCond1456Syn")}
+    AExp "IS NOT LESSER THAN" AExp -> RelationCond {cons("RelationCond1229Syn")}
+    AExp "IS NOT NEGATIVE" -> SignCond {cons("SignCond120Syn")}
+    "88" InsertDzId "VALUE" InsertDzString ";" -> Stmt {cons("Stmt122Syn")}
+    AExp "IS GREATER THAN OR EQUAL TO" AExp -> RelationCond {cons("RelationCond1383Syn")}
+    AExp "IS LESSER THAN OR EQUAL TO" AExp -> RelationCond {cons("RelationCond1534Syn")}
+    DzBool -> Bool {}
+    AExp "IS EQUAL TO" AExp -> RelationCond {cons("RelationCond1388Syn")}
+    "{" InsertDzStmts "}" -> Block {cons("Block1537Syn")}
+    Block -> Stmt {}
+    "IF" "(" InsertDzCond ")" "THEN" InsertDzBlock "END-IF" -> Stmt {cons("Stmt1469Syn")}
+    {AExp ","}* -> AExps {cons("AExps1ListSyn")}
+    AExp "IS NOT ALPHABETIC-LOWER" -> ClassCond {cons("ClassCond180Syn")}
+    BExp "IS EQUAL TO" BExp -> RelationCond {cons("RelationCond1540Syn")}
+    AExp "THRU" -> StartValue {cons("StartValue1543Syn")}
+    AExp "IS NOT ZERO" -> SignCond {cons("SignCond1400Syn")}
+    AExp "IS NOT POSITIVE" -> SignCond {cons("SignCond183Syn")}
+    AExp "IS NUMERIC" -> ClassCond {cons("ClassCond186Syn")}
+    ClassCond -> Cond {}
+    AExp ";" -> Stmt {cons("Stmt1423Syn")}
+    "(" InsertDzBExp ")" -> BExp {cons("BExp1Bracket")}
+    AExp "IS ALPHABETIC" -> ClassCond {cons("ClassCond137Syn")}
+    "88" InsertDzId "VALUE" InsertDzInt ";" -> Stmt {cons("Stmt1282Syn")}
+    "(" InsertDzAExp ")" -> AExp {cons("AExp1Bracket")}
+    DzInt -> Int {}
+    AExp "IS NOT EQUAL TO" AExp -> RelationCond {cons("RelationCond193Syn")}
+    {Id ","}* -> Ids {cons("Ids1ListSyn")}
+    BExp -> Cond {}
+    BExp "IS NOT EQUAL TO" BExp -> RelationCond {cons("RelationCond1483Syn")}
+    AExp "IS ALPHABETIC-LOWER" -> ClassCond {cons("ClassCond1352Syn")}
+    Id -> Cond {}
+    AExp "IS NEGATIVE" -> SignCond {cons("SignCond1249Syn")}
+    AExp "IS NOT ALPHABETIC-UPPER" -> ClassCond {cons("ClassCond1293Syn")}
+    "88" InsertDzId "VALUES" InsertDzString "THRU" InsertDzString ";" -> Stmt {cons("Stmt196Syn")}
+    "int" InsertDzIds ";" -> Stmt {cons("Stmt146Syn")}
+    AExp "IS NOT ALPHABETIC" -> ClassCond {cons("ClassCond1357Syn")}
+    AExp "THRU" AExp -> FullRange {cons("FullRange155Syn")}
+    SignCond -> Cond {}
+    AExp "IS GREATER THAN" AExp -> RelationCond {cons("RelationCond1307Syn")}
+    AExp "IS NOT NUMERIC" -> ClassCond {cons("ClassCond1222Syn")}
+    AExp "IS NOT GREATER THAN" AExp -> RelationCond {cons("RelationCond1443Syn")}
+    "if" "(" InsertDzBExp ")" InsertDzBlock "else" Block -> Stmt {cons("Stmt1562Syn")}
+    AExp "IS POSITIVE" -> SignCond {cons("SignCond1444Syn")}
+    "IF" "(" InsertDzCond ")" "THEN" InsertDzBlock "ELSE" InsertDzBlock "END-IF" -> Stmt {cons("Stmt159Syn")}
+    Cond -> InsertDzCond
+    AExp -> InsertDzAExp
+    Stmts -> InsertDzStmts
+    BExp -> InsertDzBExp
+    Ids -> InsertDzIds
+    Block -> InsertDzBlock
+    Id -> InsertDzId
+    String -> InsertDzString
+    Int -> InsertDzInt
+
+
+    DzDzString        -> DzString    {cons("DzString1Const")}
+    DzDzBool        -> DzBool    {cons("DzBool1Const")}
+    DzDzInt        -> DzInt    {cons("DzInt1Const")}
+    DzDzId        -> DzId    {cons("DzId1Const")}
+    DzDzFloat        -> DzFloat    {cons("DzFloat1Const")}
+
+
+
+%% start symbols subsorts
+    KItem        -> K
+    DzString        -> K
+    DzBool        -> K
+    AExp        -> K
+    Cond        -> K
+    BExp        -> K
+    RelationCond        -> K
+    StartValue        -> K
+    CombinedAndNegatedCond        -> K
+    String        -> K
+    ClassCond        -> K
+    Int        -> K
+    Stmt        -> K
+    Float        -> K
+    FullRange        -> K
+    Bool        -> K
+    Block        -> K
+    Id        -> K
+    DzInt        -> K
+    SignCond        -> K
+    DzFloat        -> K
+lexical syntax
+    "Infinity" -> DzDzFloat
+    "true" -> DzDzBool
+    "false" -> DzDzBool
+    "NaN" -> DzDzFloat
+
+
+    "VALUE" -> IdDz {reject}
+    "while" -> IdDz {reject}
+    "THRU" -> IdDz {reject}
+    "else" -> IdDz {reject}
+    "ELSE" -> IdDz {reject}
+    "if" -> IdDz {reject}
+    "IF" -> IdDz {reject}
+    "NOT" -> IdDz {reject}
+    "AND" -> IdDz {reject}
+    "true" -> IdDz {reject}
+    "THEN" -> IdDz {reject}
+    "string" -> IdDz {reject}
+    "NaN" -> IdDz {reject}
+    "VALUES" -> IdDz {reject}
+    "OR" -> IdDz {reject}
+    "Infinity" -> IdDz {reject}
+    "false" -> IdDz {reject}
+    "int" -> IdDz {reject}
+
+lexical restrictions
+    %% follow restrictions
+    "VALUE" -/- [S]
+
+
+lexical syntax
+    [A-Za-z\_][A-Za-z0-9\_]* -> IdDz
+    "VALUE" -> IdDz {reject}
+    "while" -> IdDz {reject}
+    "THRU" -> IdDz {reject}
+    "else" -> IdDz {reject}
+    "ELSE" -> IdDz {reject}
+    "if" -> IdDz {reject}
+    "IF" -> IdDz {reject}
+    "NOT" -> IdDz {reject}
+    "AND" -> IdDz {reject}
+    "true" -> IdDz {reject}
+    "THEN" -> IdDz {reject}
+    "string" -> IdDz {reject}
+    "NaN" -> IdDz {reject}
+    "VALUES" -> IdDz {reject}
+    "OR" -> IdDz {reject}
+    "Infinity" -> IdDz {reject}
+    "false" -> IdDz {reject}
+    "int" -> IdDz {reject}
+    [\-\+]? [0-9]+ -> DzIntDz
+    "88" -> DzIntDz {reject}
+    [\+\-]?[0-9]+"."[0-9]+([eE][\+\-]?[0-9]+)?([fFdD]|([pP][0-9]+[xX][0-9]+))? -> DzFloatDz
+    [\+\-]?"Infinity"([fFdD]|([pP][0-9]+[xX][0-9]+))? -> DzFloatDz
+    "Infinity" -> DzFloatDz {reject}
+    "NaN"([fFdD]|([pP][0-9]+[xX][0-9]+))? -> DzFloatDz
+    "NaN" -> DzFloatDz {reject}
+    "\"" ((~[\"\n\r\\]) | (((([\\][nrtf\"\\]) | ([\\][x][0-9a-fA-F][0-9a-fA-F])) | ([\\][u][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F])) | ([\\][U][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F])))* "\"" -> DzStringDz
+context-free syntax
+    DzStringDz -> DzString {cons("DzString1Const")}
+    IdDz -> Id {cons("Id1Const")}
+    DzIntDz -> DzInt {cons("DzInt1Const")}
+    DzFloatDz -> DzFloat {cons("DzFloat1Const")}
+
+
+context-free restrictions
+    Id -/- [A-Za-z0-9\_]
+    DzInt -/-  [0-9]

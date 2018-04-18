@@ -1,0 +1,86 @@
+mod IMP-BUILTINS is
+ including IMP-BASE .
+ eq 'SMTCall`(_`)(_`(_`)(#_(GeneratedAnonVar24:#String), .KList) ) = _`(_`)(#_(#smtCall_(GeneratedAnonVar24:#String)), .KList) .
+ eq ##tcpRequest(_`(_`)(#_(GeneratedAnonVar58:#String), .KList) ) = _`(_`)(#_(#tcpRequest(GeneratedAnonVar58:#String)), .KList) .
+ eq #retrieveTCPError(_`(_`)(#_(GeneratedAnonVar59:#String), .KList) ) = _`(_`)(#_(#retrieveTCPError(GeneratedAnonVar59:#String)), .KList) .
+ eq #isTCPError(_`(_`)(#_(GeneratedAnonVar61:#String), .KList) ) = _`(_`)(#_(#isTCPError(GeneratedAnonVar61:#String)), .KList) .
+eq 'String2K (_`(_`) (#_ (GeneratedAnonVar260:#String), .KList)) = string2k (GeneratedAnonVar260:#String) .
+eq String2Bag(_`(_`) (#_ (GeneratedAnonVar261:#String), .KList)) = string2bag (GeneratedAnonVar261:#String) .
+eq 'K2String(GeneratedAnonVar262:K) = _`(_`)(# k2string(GeneratedAnonVar262:K ), .KList) .
+eq 'Bag2String(Bag2KLabel GeneratedAnonVar263:Bag(.KList)) = _`(_`)(# bag2string(GeneratedAnonVar263:Bag ), .KList) .
+ eq 'precisionFloat(_`(_`)(#_(GeneratedAnonVar99:#Float), .KList) ) = _`(_`)(#_(precisionFloat(GeneratedAnonVar99:#Float)), .KList) .
+ eq 'exponentBitsFloat(_`(_`)(#_(GeneratedAnonVar100:#Float), .KList) ) = _`(_`)(#_(exponentBitsFloat(GeneratedAnonVar100:#Float)), .KList) .
+ eq 'signFloat(_`(_`)(#_(GeneratedAnonVar102:#Float), .KList) ) = _`(_`)(#_(signFloat(GeneratedAnonVar102:#Float)), .KList) .
+ eq '--Float_(_`(_`)(#_(GeneratedAnonVar106:#Float), .KList) ) = _`(_`)(#_(-Float_(GeneratedAnonVar106:#Float)), .KList) .
+ eq '_^Float_(_`(_`)(#_(GeneratedAnonVar107:#Float), .KList) ,, _`(_`)(#_(GeneratedAnonVar108:#Float), .KList) ) = _`(_`)(#_(_^Float_(GeneratedAnonVar107:#Float, GeneratedAnonVar108:#Float)), .KList) .
+ eq '_*Float_(_`(_`)(#_(GeneratedAnonVar109:#Float), .KList) ,, _`(_`)(#_(GeneratedAnonVar110:#Float), .KList) ) = _`(_`)(#_(_*Float_(GeneratedAnonVar109:#Float, GeneratedAnonVar110:#Float)), .KList) .
+ eq '_/Float_(_`(_`)(#_(GeneratedAnonVar111:#Float), .KList) ,, _`(_`)(#_(GeneratedAnonVar112:#Float), .KList) ) = _`(_`)(#_(_/Float_(GeneratedAnonVar111:#Float, GeneratedAnonVar112:#Float)), .KList) .
+ eq '_%Float_(_`(_`)(#_(GeneratedAnonVar113:#Float), .KList) ,, _`(_`)(#_(GeneratedAnonVar114:#Float), .KList) ) = _`(_`)(#_(_%Float_(GeneratedAnonVar113:#Float, GeneratedAnonVar114:#Float)), .KList) .
+ eq '_+Float_(_`(_`)(#_(GeneratedAnonVar115:#Float), .KList) ,, _`(_`)(#_(GeneratedAnonVar116:#Float), .KList) ) = _`(_`)(#_(_+Float_(GeneratedAnonVar115:#Float, GeneratedAnonVar116:#Float)), .KList) .
+ eq '_-Float_(_`(_`)(#_(GeneratedAnonVar117:#Float), .KList) ,, _`(_`)(#_(GeneratedAnonVar118:#Float), .KList) ) = _`(_`)(#_(_-Float_(GeneratedAnonVar117:#Float, GeneratedAnonVar118:#Float)), .KList) .
+ eq 'rootFloat(_`(_`)(#_(GeneratedAnonVar120:#Float), .KList) ,, _`(_`)(#_(GeneratedAnonVar121:#Int), .KList) ) = _`(_`)(#_(rootFloat(GeneratedAnonVar120:#Float, GeneratedAnonVar121:#Int)), .KList) .
+ eq 'absFloat(_`(_`)(#_(GeneratedAnonVar122:#Float), .KList) ) = _`(_`)(#_(absFloat(GeneratedAnonVar122:#Float)), .KList) .
+ eq 'floorFloat(_`(_`)(#_(GeneratedAnonVar123:#Float), .KList) ) = _`(_`)(#_(floorFloat(GeneratedAnonVar123:#Float)), .KList) .
+ eq 'ceilFloat(_`(_`)(#_(GeneratedAnonVar124:#Float), .KList) ) = _`(_`)(#_(ceilingFloat(GeneratedAnonVar124:#Float)), .KList) .
+ eq 'expFloat(_`(_`)(#_(GeneratedAnonVar125:#Float), .KList) ) = _`(_`)(#_(expFloat(GeneratedAnonVar125:#Float)), .KList) .
+ eq 'logFloat(_`(_`)(#_(GeneratedAnonVar126:#Float), .KList) ) = _`(_`)(#_(logFloat(GeneratedAnonVar126:#Float)), .KList) .
+ eq 'sinFloat(_`(_`)(#_(GeneratedAnonVar127:#Float), .KList) ) = _`(_`)(#_(sinFloat(GeneratedAnonVar127:#Float)), .KList) .
+ eq 'cosFloat(_`(_`)(#_(GeneratedAnonVar128:#Float), .KList) ) = _`(_`)(#_(cosFloat(GeneratedAnonVar128:#Float)), .KList) .
+ eq 'tanFloat(_`(_`)(#_(GeneratedAnonVar129:#Float), .KList) ) = _`(_`)(#_(tanFloat(GeneratedAnonVar129:#Float)), .KList) .
+ eq 'asinFloat(_`(_`)(#_(GeneratedAnonVar130:#Float), .KList) ) = _`(_`)(#_(asinFloat(GeneratedAnonVar130:#Float)), .KList) .
+ eq 'acosFloat(_`(_`)(#_(GeneratedAnonVar131:#Float), .KList) ) = _`(_`)(#_(acosFloat(GeneratedAnonVar131:#Float)), .KList) .
+ eq 'atanFloat(_`(_`)(#_(GeneratedAnonVar132:#Float), .KList) ) = _`(_`)(#_(atanFloat(GeneratedAnonVar132:#Float)), .KList) .
+ eq 'maxFloat(_`(_`)(#_(GeneratedAnonVar133:#Float), .KList) ,, _`(_`)(#_(GeneratedAnonVar134:#Float), .KList) ) = _`(_`)(#_(maxFloat(GeneratedAnonVar133:#Float, GeneratedAnonVar134:#Float)), .KList) .
+ eq 'minFloat(_`(_`)(#_(GeneratedAnonVar135:#Float), .KList) ,, _`(_`)(#_(GeneratedAnonVar136:#Float), .KList) ) = _`(_`)(#_(minFloat(GeneratedAnonVar135:#Float, GeneratedAnonVar136:#Float)), .KList) .
+ eq '_<=Float_(_`(_`)(#_(GeneratedAnonVar138:#Float), .KList) ,, _`(_`)(#_(GeneratedAnonVar139:#Float), .KList) ) = _`(_`)(#_(_<=Float_(GeneratedAnonVar138:#Float, GeneratedAnonVar139:#Float)), .KList) .
+ eq '_<Float_(_`(_`)(#_(GeneratedAnonVar140:#Float), .KList) ,, _`(_`)(#_(GeneratedAnonVar141:#Float), .KList) ) = _`(_`)(#_(_<Float_(GeneratedAnonVar140:#Float, GeneratedAnonVar141:#Float)), .KList) .
+ eq '_>=Float_(_`(_`)(#_(GeneratedAnonVar142:#Float), .KList) ,, _`(_`)(#_(GeneratedAnonVar143:#Float), .KList) ) = _`(_`)(#_(_>=Float_(GeneratedAnonVar142:#Float, GeneratedAnonVar143:#Float)), .KList) .
+ eq '_>Float_(_`(_`)(#_(GeneratedAnonVar144:#Float), .KList) ,, _`(_`)(#_(GeneratedAnonVar145:#Float), .KList) ) = _`(_`)(#_(_>Float_(GeneratedAnonVar144:#Float, GeneratedAnonVar145:#Float)), .KList) .
+ eq '_==Float_(_`(_`)(#_(GeneratedAnonVar146:#Float), .KList) ,, _`(_`)(#_(GeneratedAnonVar147:#Float), .KList) ) = _`(_`)(#_(_==Float_(GeneratedAnonVar146:#Float, GeneratedAnonVar147:#Float)), .KList) .
+ eq Int2Float(_`(_`)(#_(GeneratedAnonVar149:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar150:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar151:#Int), .KList) ) = _`(_`)(#_(int2Float(GeneratedAnonVar149:#Int, GeneratedAnonVar150:#Int, GeneratedAnonVar151:#Int)), .KList) .
+ eq Float2Int(_`(_`)(#_(GeneratedAnonVar153:#Float), .KList) ) = _`(_`)(#_(float2Int(GeneratedAnonVar153:#Float)), .KList) .
+eq randomRandom(_`(_`)(#_(GeneratedAnonVar135:#Nat), .KList) ) = _`(_`)(# randomRandom(GeneratedAnonVar135:#Nat ), .KList) .
+ eq '#distinctCounter(_`(_`)(#_(GeneratedAnonVar162:#Int), .KList) ) = _`(_`)(#_(distinctCounter(GeneratedAnonVar162:#Int)), .KList) .
+ eq 'notBool_(_`(_`)(#_(GeneratedAnonVar215:#Bool), .KList) ) = _`(_`)(#_(notBool_(GeneratedAnonVar215:#Bool)), .KList) .
+ eq '_andBool_(_`(_`)(#_(GeneratedAnonVar216:#Bool), .KList) ,, _`(_`)(#_(GeneratedAnonVar217:#Bool), .KList) ) = _`(_`)(#_(_andBool_(GeneratedAnonVar216:#Bool, GeneratedAnonVar217:#Bool)), .KList) .
+ eq '_xorBool_(_`(_`)(#_(GeneratedAnonVar218:#Bool), .KList) ,, _`(_`)(#_(GeneratedAnonVar219:#Bool), .KList) ) = _`(_`)(#_(_xorBool_(GeneratedAnonVar218:#Bool, GeneratedAnonVar219:#Bool)), .KList) .
+ eq '_orBool_(_`(_`)(#_(GeneratedAnonVar220:#Bool), .KList) ,, _`(_`)(#_(GeneratedAnonVar221:#Bool), .KList) ) = _`(_`)(#_(_orBool_(GeneratedAnonVar220:#Bool, GeneratedAnonVar221:#Bool)), .KList) .
+ eq '_impliesBool_(_`(_`)(#_(GeneratedAnonVar222:#Bool), .KList) ,, _`(_`)(#_(GeneratedAnonVar223:#Bool), .KList) ) = _`(_`)(#_(_impliesBool_(GeneratedAnonVar222:#Bool, GeneratedAnonVar223:#Bool)), .KList) .
+ eq '_==Bool_(_`(_`)(#_(GeneratedAnonVar224:#Bool), .KList) ,, _`(_`)(#_(GeneratedAnonVar225:#Bool), .KList) ) = _`(_`)(#_(_==Bool_(GeneratedAnonVar224:#Bool, GeneratedAnonVar225:#Bool)), .KList) .
+eq '_==K_(GeneratedAnonVar132:K,, GeneratedAnonVar133:K)  = _`(_`)(# _==K_(GeneratedAnonVar132:K , GeneratedAnonVar133:K ), .KList) .
+eq '_==K_(GeneratedAnonVar132:K,, GeneratedAnonVar133:K)  = _`(_`)(# _==K_(GeneratedAnonVar132:K , GeneratedAnonVar133:K ), .KList) .
+ eq '~Int_(_`(_`)(#_(GeneratedAnonVar239:#Int), .KList) ) = _`(_`)(#_(~Int_(GeneratedAnonVar239:#Int)), .KList) .
+eq '_^Int_(_`(_`)(#_(GeneratedAnonVar30:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar31:#Nat), .KList) ) = _`(_`)(# _^Int_(GeneratedAnonVar30:#Int , GeneratedAnonVar31:#Nat ), .KList) .
+ eq '_*Int_(_`(_`)(#_(GeneratedAnonVar240:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar241:#Int), .KList) ) = _`(_`)(#_(_*Int_(GeneratedAnonVar240:#Int, GeneratedAnonVar241:#Int)), .KList) .
+eq '_/Int_(_`(_`)(#_(GeneratedAnonVar30:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar31:#NzInt), .KList) ) = _`(_`)(# _/Int_(GeneratedAnonVar30:#Int , GeneratedAnonVar31:#NzInt ), .KList) .
+eq '_%Int_(_`(_`)(#_(GeneratedAnonVar30:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar31:#NzInt), .KList) ) = _`(_`)(# _%Int_(GeneratedAnonVar30:#Int , GeneratedAnonVar31:#NzInt ), .KList) .
+ eq '_+Int_(_`(_`)(#_(GeneratedAnonVar242:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar243:#Int), .KList) ) = _`(_`)(#_(_+Int_(GeneratedAnonVar242:#Int, GeneratedAnonVar243:#Int)), .KList) .
+ eq '_-Int_(_`(_`)(#_(GeneratedAnonVar244:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar245:#Int), .KList) ) = _`(_`)(#_(_-Int_(GeneratedAnonVar244:#Int, GeneratedAnonVar245:#Int)), .KList) .
+eq '_>>Int_(_`(_`)(#_(GeneratedAnonVar30:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar31:#Nat), .KList) ) = _`(_`)(# _>>Int_(GeneratedAnonVar30:#Int , GeneratedAnonVar31:#Nat ), .KList) .
+eq '_<<Int_(_`(_`)(#_(GeneratedAnonVar30:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar31:#Nat), .KList) ) = _`(_`)(# _<<Int_(GeneratedAnonVar30:#Int , GeneratedAnonVar31:#Nat ), .KList) .
+ eq '_&Int_(_`(_`)(#_(GeneratedAnonVar246:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar247:#Int), .KList) ) = _`(_`)(#_(_&Int_(GeneratedAnonVar246:#Int, GeneratedAnonVar247:#Int)), .KList) .
+ eq '_xorInt_(_`(_`)(#_(GeneratedAnonVar248:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar249:#Int), .KList) ) = _`(_`)(#_(_xorInt_(GeneratedAnonVar248:#Int, GeneratedAnonVar249:#Int)), .KList) .
+ eq '_|Int_(_`(_`)(#_(GeneratedAnonVar250:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar251:#Int), .KList) ) = _`(_`)(#_(_|Int_(GeneratedAnonVar250:#Int, GeneratedAnonVar251:#Int)), .KList) .
+ eq absInt(_`(_`)(#_(GeneratedAnonVar252:#Int), .KList) ) = _`(_`)(#_(absInt(GeneratedAnonVar252:#Int)), .KList) .
+ eq '_<=Int_(_`(_`)(#_(GeneratedAnonVar254:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar255:#Int), .KList) ) = _`(_`)(#_(_<=Int_(GeneratedAnonVar254:#Int, GeneratedAnonVar255:#Int)), .KList) .
+ eq '_<Int_(_`(_`)(#_(GeneratedAnonVar256:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar257:#Int), .KList) ) = _`(_`)(#_(_<Int_(GeneratedAnonVar256:#Int, GeneratedAnonVar257:#Int)), .KList) .
+ eq '_>=Int_(_`(_`)(#_(GeneratedAnonVar258:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar259:#Int), .KList) ) = _`(_`)(#_(_>=Int_(GeneratedAnonVar258:#Int, GeneratedAnonVar259:#Int)), .KList) .
+ eq '_>Int_(_`(_`)(#_(GeneratedAnonVar260:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar261:#Int), .KList) ) = _`(_`)(#_(_>Int_(GeneratedAnonVar260:#Int, GeneratedAnonVar261:#Int)), .KList) .
+ eq '_==Int_(_`(_`)(#_(GeneratedAnonVar262:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar263:#Int), .KList) ) = _`(_`)(#_(_==Int_(GeneratedAnonVar262:#Int, GeneratedAnonVar263:#Int)), .KList) .
+ eq '_=Int_(_`(_`)(#_(GeneratedAnonVar264:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar265:#Int), .KList) ) = _`(_`)(#_(_==Int_(GeneratedAnonVar264:#Int, GeneratedAnonVar265:#Int)), .KList) .
+ eq '_+String_(_`(_`)(#_(GeneratedAnonVar272:#String), .KList) ,, _`(_`)(#_(GeneratedAnonVar273:#String), .KList) ) = _`(_`)(#_(_+String_(GeneratedAnonVar272:#String, GeneratedAnonVar273:#String)), .KList) .
+ eq '_==String_(_`(_`)(#_(GeneratedAnonVar275:#String), .KList) ,, _`(_`)(#_(GeneratedAnonVar276:#String), .KList) ) = _`(_`)(#_(_==String_(GeneratedAnonVar275:#String, GeneratedAnonVar276:#String)), .KList) .
+ eq lengthString(_`(_`)(#_(GeneratedAnonVar278:#String), .KList) ) = _`(_`)(#_(lengthString(GeneratedAnonVar278:#String)), .KList) .
+ceq chrChar(_`(_`)(#_(GeneratedAnonVar86:#Nat), .KList) ) = _`(_`)(# chrChar(GeneratedAnonVar86:#Nat ), .KList) if GeneratedAnonVar86:#Nat <=Int 255 .
+eq ordChar(_`(_`)(#_(GeneratedAnonVar88:#Char), .KList) ) = _`(_`)(# ordChar(GeneratedAnonVar88:#Char ), .KList) .
+eq substrString(_`(_`)(#_(GeneratedAnonVar90:#String), .KList) ,, _`(_`)(#_(GeneratedAnonVar91:#Nat), .KList) ,, _`(_`)(#_(GeneratedAnonVar92:#Nat), .KList) ) = _`(_`)(# substrString(GeneratedAnonVar90:#String , GeneratedAnonVar91:#Nat , GeneratedAnonVar92:#Nat ), .KList) .
+eq findString(_`(_`)(#_(GeneratedAnonVar94:#String), .KList) ,, _`(_`)(#_(GeneratedAnonVar95:#String), .KList) ,, _`(_`)(#_(GeneratedAnonVar96:#Nat), .KList) ) = _`(_`)(# findString(GeneratedAnonVar94:#String , GeneratedAnonVar95:#String , GeneratedAnonVar96:#Nat ), .KList) .
+eq rfindString(_`(_`)(#_(GeneratedAnonVar98:#String), .KList) ,, _`(_`)(#_(GeneratedAnonVar99:#String), .KList) ,, _`(_`)(#_(GeneratedAnonVar100:#Nat), .KList) ) = _`(_`)(# rfindString(GeneratedAnonVar98:#String , GeneratedAnonVar99:#String , GeneratedAnonVar100:#Nat ), .KList) .
+ eq Float2String(_`(_`)(#_(GeneratedAnonVar287:#Float), .KList) ) = _`(_`)(#_(float2String(GeneratedAnonVar287:#Float)), .KList) .
+ceq String2Float(_`(_`)(#_(GeneratedAnonVar85:#String), .KList) ) = _`(_`)(# GeneratedAnonVar86:#Float, .KList) if GeneratedAnonVar86:#Float := string2Float(GeneratedAnonVar85:#String) .
+ceq String2Int(_`(_`)(#_(GeneratedAnonVar85:#String), .KList) ) = _`(_`)(# GeneratedAnonVar86:#Int, .KList) if GeneratedAnonVar86:#Int := string2int(GeneratedAnonVar85:#String) .
+ eq Int2String(_`(_`)(#_(GeneratedAnonVar291:#Int), .KList) ) = _`(_`)(#_(int2string(GeneratedAnonVar291:#Int)), .KList) .
+ eq Base2String(_`(_`)(#_(GeneratedAnonVar293:#Int), .KList) ,, _`(_`)(#_(GeneratedAnonVar294:#Int), .KList) ) = _`(_`)(#_(base2String(GeneratedAnonVar293:#Int, GeneratedAnonVar294:#Int)), .KList) .
+ eq String2Base(_`(_`)(#_(GeneratedAnonVar296:#String), .KList) ,, _`(_`)(#_(GeneratedAnonVar297:#Int), .KList) ) = _`(_`)(#_(string2Base(GeneratedAnonVar296:#String, GeneratedAnonVar297:#Int)), .KList) .
+ eq '_<String_(_`(_`)(#_(GeneratedAnonVar309:#String), .KList) ,, _`(_`)(#_(GeneratedAnonVar310:#String), .KList) ) = _`(_`)(#_(_<String_(GeneratedAnonVar309:#String, GeneratedAnonVar310:#String)), .KList) .
+endm

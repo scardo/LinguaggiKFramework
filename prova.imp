@@ -1,0 +1,66 @@
+int x, y, z, k, r, res;
+x=5;
+y=13;
+z=x+y;
+k=z/3;
+
+// ((x > 7 || y != 0)&&(z == x+y && k <= z)) = true
+IF(((x IS GREATER THAN 7)OR(y IS NOT ZERO))AND((z IS EQUAL TO x+y)AND(k IS LESSER THAN OR EQUAL TO z))) THEN {
+	r=10;
+}ELSE{
+	r=2;
+}
+END-IF
+
+string l, st, str;
+l="ciao";
+st="23";
+str="ciao mondo";
+
+IF(st IS NUMERIC) THEN {
+	res=1;
+}ELSE{
+	res=-1;
+}
+END-IF
+
+//res>0 && (l è letterale-minuscolo || !(str è letterale minuscolo)) = true
+IF((res IS POSITIVE)AND((l IS ALPHABETIC-LOWER)OR(NOT(str IS ALPHABETIC-UPPER)))) THEN {
+	res=15;
+}ELSE{
+	res=5;
+}
+END-IF
+
+int rescn, rescnstr, cn;
+
+88 cy VALUE 15;
+
+cn = 4;
+
+int cx;
+cx=17;
+
+88 cz VALUES 11 THRU 22;
+
+IF(cy OR cz) THEN {
+	rescn=10;
+}ELSE{
+	rescn=2;
+}
+END-IF
+
+
+string s,sz;
+s="SFFUHJL HGDfdsghjFH";
+sz="pippo";
+
+
+88 cv VALUES "p" THRU "pippoooo";
+
+IF(cv) THEN {
+	rescnstr=10;
+}ELSE{
+	rescnstr=2;
+}
+END-IF
